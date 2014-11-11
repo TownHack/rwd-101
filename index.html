@@ -46,6 +46,7 @@
 					<div class="col">
 						<h1>Introduction to Responsive Web Design</h1>
 					</div>
+
 					<div class="col">
 						<img src="img/rwd-demo.png" alt="Responsive Web Design Demo" class="borderless">
 
@@ -98,19 +99,43 @@
 						<ul>
 							<li class="fragment">...are new to responsive web design</li>
 							<li class="fragment">...no longer want to build separate websites for different screen sizes</li>
+							<li class="fragment">...want to learn better practices</li>
 						</ul>
 					</div>
 				</section>
 
 				<section>
-					<section>
-						<h2>The Problem</h2>
+					<h2>Wait... Responsive what?</h2>
 
-						<p>There are too many devices and screen sizes to predict every possible outcome.</p>
-						<p>Desktop no longer dominates the realm of web browsers.</p>
+					<p class="fragment"><strong>Responsive Web Design:</strong> The practice of designing flexible layouts that do not conform to a specific device's orientation or screen size. [<a href="samples/rwd-flexibility.html">Example</a>]</p>
+
+					<aside class="notes">
+						- What is Responsive Web Design?
+
+						- Not about designing for mobile
+						- Not even about designing for desktops
+						- It's about a better practice
+					</aside>
+				</section>
+
+				<section>
+					<h2>Other Examples</h2>
+
+					<ul>
+						<li><a href="http://mediaqueri.es">mediaqueri.es</a></li>
+						<li><a href="http://www.indochino.com">Indochino</a></li>
+						<li><a href="http://alistapart.com/article/responsive-web-design">A List Apart</a> (also a good reference)</li>
+					</ul>
+				</section>
+
+				<section>
+					<section>
+						<h2>Why is this important?</h2>
+
+						<p class="fragment">There are too many devices and screen sizes to predict every possible outcome</p>
 
 						<aside class="notes">
-							- It's hard to sell a solution without first showing the problem
+							- Websites are meant to be dynamic
 						</aside>
 					</section>
 
@@ -129,23 +154,77 @@
 							<img src="img/platform-stats-past-2-years.jpg">
 						</div>
 					</section>
+
+					<section>
+						<h3>What does this mean?</h3>
+
+						<p class="fragment">Desktop no longer dominates the realm of web browsers</p>
+
+						<aside class="notes">
+							- Something needs to change
+							- We can't keep trying to develop for each possible outcome independently
+						</aside>
+					</section>
 				</section>
 
 				<section>
-					<h3>What does this mean?</h3>
+					<section>
+						<h2>So, how do you do it?</h2>
 
-					<aside class="notes">
-						- Something needs to change
-						- We can't keep trying to develop for each possible outcome independently
-					</aside>
+						<h3 class="fragment">CSS Media Queries!</h3>
+
+						<aside class="notes">
+							- Ask if anyone knows how it is done
+						</aside>
+					</section>
+
+					<section>
+						<p>Media Queries allow you to test the device for certain properties...</p>
+
+						<br>
+						<ul class="fragment">
+							<li>Screen Width &amp; Height</li>
+							<li>Device Orientation</li>
+							<li>&amp; More!</li>
+						</ul>
+						<br><br>
+
+						<p class="fragment">...and use the results to help change the layout or style with CSS.</p>
+					</section>
 				</section>
 
 				<section>
-					<a href="samples/sample-1.html">Sample #1</a>
+					<h2>Simple Example</h2>
 
-					<aside class="notes">
-						Make verbal note that anyone is welcome to listen in, of course.
-					</aside>
+<pre><code>body {
+  background-color: #ddd;
+}
+
+@media all and (min-width: 50rem) {
+  body {
+    background-color: #444;
+  }
+}</code></pre>
+					
+					<br>
+					<p class="fragment">Screens less than 50rem wide will have a light background.</p>
+					<p class="fragment">Screens 50rem or wider will have a dark background.</p>
+					<p class="fragment"><a href="samples/light-dark.html">Example</a></p>
+				</section>
+
+				<section>
+					<h2>How to use Media Queries</h2>
+
+					<p>1. Inside a CSS file or Style block</p>
+<pre><code>@media all and (min-width: 50rem) {
+  body {
+    background-color: #444;
+  }
+}</code></pre>
+					<p>2. Inside the link tag</p>
+<pre><code><link media="all and (min-width: 50rem)" href="large.css" rel="stylesheet"></code></pre>
+					<p>3. In combination with the @import statement</p>
+<pre><code>@import url('large.css') all and (min-width: 50rem);</code></pre>
 				</section>
 			</div>
 
