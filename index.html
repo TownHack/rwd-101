@@ -209,22 +209,36 @@
 					<br>
 					<p class="fragment">Screens less than 50rem wide will have a light background.</p>
 					<p class="fragment">Screens 50rem or wider will have a dark background.</p>
-					<p class="fragment"><a href="samples/light-dark.html">Example</a></p>
+					<p class="fragment">[<a href="samples/light-dark.html">Example</a>]</p>
 				</section>
 
 				<section>
 					<h2>How to use Media Queries</h2>
 
-					<p>1. Inside a CSS file or Style block</p>
+					<p>Inside a CSS file or Style block</p>
 <pre><code>@media all and (min-width: 50rem) {
   body {
     background-color: #444;
   }
 }</code></pre>
-					<p>2. Inside the link tag</p>
+					<p>Inside the link tag</p>
 <pre><code><link media="all and (min-width: 50rem)" href="large.css" rel="stylesheet"></code></pre>
-					<p>3. In combination with the @import statement</p>
+					<p>In combination with the @import statement</p>
 <pre><code>@import url('large.css') all and (min-width: 50rem);</code></pre>
+				</section>
+
+				<section>
+					<h2>Questions?</h2>
+				</section>
+
+				<section>
+					<h2>More Examples</h2>
+				</section>
+
+				<section>
+					<h2>References</h2>
+
+					<a href="https://developers.google.com/web/fundamentals/layouts/rwd-fundamentals/">Google's Web Fundamentals</a>
 				</section>
 			</div>
 
