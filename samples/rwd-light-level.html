@@ -12,16 +12,41 @@
 	<style>
 		body {
 			background-color: #ddd;
+			color: #ddd;
 		}
 
 		@media (light-level: dim) {
-			body {
-				background-color: #444;
+			.dim {
+				color: #444;
+			}
+		}
+
+		@media (light-level: normal) {
+			.normal {
+				color: #444;
+			}
+		}
+
+		@media (light-level: washed) {
+			.washed {
+				color: #444;
 			}
 		}
 	</style>
 </head>
 <body>
+	<span id="lux-value"></span>
 
+	<script>
+		;(function (document, window)
+		{
+			window.addEventListener('devicelight', function (e)
+			{
+				var lux = e.value;
+
+				document.getElementById('lux-value').innerText = lux;
+			}, false);
+		})(document, window);
+	</script>
 </body>
 </html>
