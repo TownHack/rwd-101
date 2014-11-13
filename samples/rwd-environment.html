@@ -17,38 +17,33 @@
 			font-family: sans-serif;
 			text-align: center;
 
-			transition: background-color 0.5s, color 0.5s;
+			transition: background-color 0.5s;
 		}
 
-		body.dim
+		body.dark
 		{
 			background-color: #222;
-			color: #ddd;
 		}
 
-		body.washed
+		h1, h2
 		{
-			background-color: #fff;
-			color: #000;
-		}
-
-		span
-		{
-			display: block;
 			font-size: 7rem;
 		}
 
-		body span.world
+		body .world
 		{
 			color: #46bfd3;
 		}
 	</style>
 </head>
 <body>
-	<span class="hello">Hello</span>
-	<span class="world">World</span>
+	<h1 class="hello">Hello</h1>
+	<h2 class="world">World</h2>
 
 	<script>
+		/*
+			DISCLAIMER: The Media Query [light-level] property is not supported in any browsers at the moment, so I am using JavaScript to emulate its features. This is just a proof of concept.
+		*/
 		;(function (document, window)
 		{
 			var body = document.body;
@@ -59,18 +54,11 @@
 
 				if (lux < 5)
 				{
-					body.classList.remove('normal', 'washed');
-					body.classList.add('dim');
-				}
-				else if (lux > 2000)
-				{
-					body.classList.remove('dim', 'normal');
-					body.classList.add('washed');
+					body.classList.add('dark');
 				}
 				else
 				{
-					body.classList.remove('dim', 'washed');
-					body.classList.add('normal');
+					body.classList.remove('dark');
 				}
 			}, false);
 		})(document, window);

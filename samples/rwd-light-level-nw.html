@@ -1,0 +1,52 @@
+<!doctype html>
+<!-- 
+	DISCLAIMER: For the sake of simplicity and readability, all CSS and/or JavaScript has been included in this one file.
+ -->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>RWD - Light Level Demo</title>
+
+	<style>
+		body {
+			background-color: #ddd;
+			color: #ddd;
+		}
+
+		@media (light-level: dim) {
+			.dim {
+				color: #444;
+			}
+		}
+
+		@media (light-level: normal) {
+			.normal {
+				color: #444;
+			}
+		}
+
+		@media (light-level: washed) {
+			.washed {
+				color: #444;
+			}
+		}
+	</style>
+</head>
+<body>
+	<span id="lux-value"></span>
+
+	<script>
+		;(function (document, window)
+		{
+			window.addEventListener('devicelight', function (e)
+			{
+				var lux = e.value;
+
+				document.getElementById('lux-value').innerText = lux;
+			}, false);
+		})(document, window);
+	</script>
+</body>
+</html>
