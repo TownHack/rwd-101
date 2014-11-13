@@ -109,6 +109,10 @@
 
 					<p class="fragment"><strong>Responsive Web Design:</strong> The practice of designing flexible layouts that are adaptable to any device, any viewport, or even to any <a href="samples/rwd-environment.html">environment</a>.</p>
 
+					<small class="fragment">
+						<p>* This example will only work in the Firefox Web Browser</p>
+					</small>
+
 					<aside class="notes">
 						- What is Responsive Web Design?
 
@@ -119,12 +123,13 @@
 				</section>
 
 				<section>
-					<h2>Other Examples</h2>
+					<h2>What's the difference?</h2>
 
 					<ul>
-						<li><a href="http://mediaqueri.es">mediaqueri.es</a></li>
-						<li><a href="http://www.indochino.com">Indochino</a></li>
-						<li><a href="http://alistapart.com/article/responsive-web-design">A List Apart</a> (also a good reference)</li>
+						<li><a href="samples/fixed.html">Fixed</a></li>
+						<li><a href="samples/fluid.html">Fluid</a></li>
+						<li><a href="samples/adaptive.html">Adaptive</a></li>
+						<li><a href="samples/responsive.html">Responsive</a></li>
 					</ul>
 				</section>
 
@@ -183,9 +188,10 @@
 
 						<br>
 						<ul class="fragment">
-							<li>Screen Width &amp; Height</li>
-							<li>Device Orientation</li>
-							<li>&amp; More!</li>
+							<li>Viewport/Device Width &amp; Height</li>
+							<li>Viewport/Device Orientation</li>
+							<li>Light Levels</li>
+							<li>&amp; <a href="http://www.w3.org/TR/css3-mediaqueries/">More</a>!</li>
 						</ul>
 						<br><br>
 
@@ -209,7 +215,7 @@
 					<br>
 					<p class="fragment">Screens less than 50rem wide will have a light background.</p>
 					<p class="fragment">Screens 50rem or wider will have a dark background.</p>
-					<p class="fragment">[<a href="samples/light-dark.html">Example</a>]</p>
+					<p class="fragment"><a href="samples/rwd-bg-color.html">Let's take a look!</a></p>
 				</section>
 
 				<section>
@@ -222,9 +228,20 @@
   }
 }</code></pre>
 					<p>Inside the link tag</p>
-<pre><code><link media="all and (min-width: 50rem)" href="large.css" rel="stylesheet"></code></pre>
+					<pre><code><link media="all and (min-width: 50rem)" href="large.css" rel="stylesheet"></code></pre>
+					
 					<p>In combination with the @import statement</p>
-<pre><code>@import url('large.css') all and (min-width: 50rem);</code></pre>
+					<pre><code>@import url('large.css') all and (min-width: 50rem);</code></pre>
+				</section>
+
+				<section>
+					<h2>Don't forget the Meta!</h2>
+
+					<pre><code><meta name="viewport" content="width=device-width, initial-scale=1.0"></code></pre>
+				</section>
+
+				<section>
+					<h2>Let's Do It!</h2>
 				</section>
 
 				<section>
@@ -233,12 +250,29 @@
 
 				<section>
 					<h2>More Examples</h2>
+
+					<ul>
+						<li><a href="http://mediaqueri.es">mediaqueri.es</a></li>
+						<li><a href="http://www.indochino.com">Indochino</a></li>
+						<li><a href="https://townhack.co">Town Hack</a></li>
+						<li><a href="https://davidmyers.us">David Myers Personal Site</a> (yay self promotion!)</li>
+					</ul>
 				</section>
 
 				<section>
 					<h2>References</h2>
 
-					<a href="https://developers.google.com/web/fundamentals/layouts/rwd-fundamentals/">Google's Web Fundamentals</a>
+					<ul>
+						<li><a href="http://www.w3.org/TR/css3-mediaqueries/">W3C Media Queries Specification</a></li>
+						<li><a href="http://www.w3.org/TR/mediaqueries-4/">W3C Media Queries Specification (Level 4)</a></li>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries">Mozilla Developer Network</a></li>
+						<li><a href="http://alistapart.com/article/responsive-web-design">A List Apart</a></li>
+						<li><a href="http://blog.froont.com/9-basic-principles-of-responsive-web-design/">Froont Blog</a></li>
+						<li><a href="https://developers.google.com/web/fundamentals/layouts/rwd-fundamentals/">Google's Web Fundamentals</a></li>
+						<li><a href="http://blog.teamtreehouse.com/modern-field-guide-responsive-web-design">Treehouse Blog</a></li>
+						<li><a href="http://johnpolacek.github.io/scrolldeck.js/decks/responsive/">John Polacek's Presentation</a></li>
+						<li><a href="mailto://davidrmyersii@gmail.com">davidrmyersii@gmail.com</a> (email me!)</li>
+					</ul>
 				</section>
 			</div>
 

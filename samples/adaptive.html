@@ -7,7 +7,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<title>RWD - Flexibility Demo</title>
+	<title>Adaptive Web Design Demo</title>
 
 	<style>
 		html
@@ -29,6 +29,12 @@
 			color: #444;
 		}
 
+		header, main, footer
+		{
+			margin: auto;
+			width: 65rem;
+		}
+
 		header
 		{
 			text-transform: uppercase;
@@ -36,6 +42,7 @@
 
 		nav ul
 		{
+			display: flex;
 			list-style: none;
 			margin: 0;
 			padding: 0;
@@ -44,6 +51,7 @@
 		nav li
 		{
 			padding: 0.25rem;
+			width: 33.33%;
 		}
 
 		nav li a
@@ -76,44 +84,47 @@
 			margin: 0.5rem 0.25rem;
 		}
 
-		@media all and (min-width: 40rem) {
-			header
+		.row
+		{
+			display: flex;
+		}
+
+		.column
+		{
+			width: 50%;
+		}
+
+		@media all and (max-width: 65.5rem)
+		{
+			header, main, footer
 			{
 				margin: auto;
-				max-width: 65rem;
+				width: 50rem;
 			}
+		}
 
-			header nav ul
-			{
-				display: flex;
-			}
-
-			header nav ul li
-			{
-				width: 33.33%;
-			}
-
-			main
+		@media all and (max-width: 50.5rem)
+		{
+			header, main, footer
 			{
 				margin: auto;
-				max-width: 65rem;
+				width: 35rem;
 			}
+		}
 
-			.row
+		@media all and (max-width: 35.5rem)
+		{
+			header, main, footer
 			{
-				display: flex;
-			}
-
-			.column
-			{
-				width: 50%;
+				margin: auto;
+				width: 20rem;
 			}
 		}
 	</style>
 </head>
 <body>
 	<header>
-		<h1>Responsive Web Design Demo</h1>
+		<h1>Adaptive Web Design Demo</h1>
 
 		<nav>
 			<ul>

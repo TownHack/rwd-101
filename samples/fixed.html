@@ -7,7 +7,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<title>RWD - Flexibility Demo</title>
+	<title>Fixed Web Design Demo</title>
 
 	<style>
 		html
@@ -29,6 +29,12 @@
 			color: #444;
 		}
 
+		header, main, footer
+		{
+			margin: auto;
+			width: 65rem;
+		}
+
 		header
 		{
 			text-transform: uppercase;
@@ -36,6 +42,7 @@
 
 		nav ul
 		{
+			display: flex;
 			list-style: none;
 			margin: 0;
 			padding: 0;
@@ -44,6 +51,7 @@
 		nav li
 		{
 			padding: 0.25rem;
+			width: 33.33%;
 		}
 
 		nav li a
@@ -76,44 +84,20 @@
 			margin: 0.5rem 0.25rem;
 		}
 
-		@media all and (min-width: 40rem) {
-			header
-			{
-				margin: auto;
-				max-width: 65rem;
-			}
+		.row
+		{
+			display: flex;
+		}
 
-			header nav ul
-			{
-				display: flex;
-			}
-
-			header nav ul li
-			{
-				width: 33.33%;
-			}
-
-			main
-			{
-				margin: auto;
-				max-width: 65rem;
-			}
-
-			.row
-			{
-				display: flex;
-			}
-
-			.column
-			{
-				width: 50%;
-			}
+		.column
+		{
+			width: 50%;
 		}
 	</style>
 </head>
 <body>
 	<header>
-		<h1>Responsive Web Design Demo</h1>
+		<h1>Fixed Web Design Demo</h1>
 
 		<nav>
 			<ul>
@@ -149,7 +133,7 @@
 	</main>
 
 	<footer>
-		<h4>Adaptive Web Design Demo at <a href="https://townhack.co">Town Hack Columbus</a> 2014</h4>
+		<h4>Fixed Web Design Demo at <a href="https://townhack.co">Town Hack Columbus</a> 2014</h4>
 	</footer>
 </body>
 </html>
